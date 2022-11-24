@@ -1,27 +1,3 @@
-main {
-  width: 65%;
-  display: flex;
-  flex-direction: column;
-}
-
-aside {
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-}
-
-h2, h3 {
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-body,input,textarea, label {
-margin: auto;
-padding: 2px;
-font-family: Arial, Helvetica, sans-serif;
-}
-
 /* Main & Aside Props */
 
 .flexContent {
@@ -36,4 +12,30 @@ body,input,textarea, label {
 
 .flexContent {
   display: flex;
+}
+
+main {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+}
+
+aside {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+/* Global Styles */
+
+h2, h3 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body,input,textarea, label {
+margin: auto;
+padding: 2px;
+font-family: Arial, Helvetica, sans-serif;
 }

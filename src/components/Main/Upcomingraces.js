@@ -32,11 +32,6 @@ export default class Upcomingraces extends Component {
             title: "The ultimate one day classic"
         }            
     ]
-
-    function closeModal () {
-        let modal = document.getElementById("myModal");
-        modal.style.display = "none";
-      }
   
       function showModal(){
         let modal = document.getElementById("myModal");

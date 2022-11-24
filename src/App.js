@@ -16,12 +16,7 @@ import Roadclosures from './components/Aside/Roadclosures';
 import Safetyvideo from './components/Aside/Safetyvideo';
 import Weather from './components/Main/Weather';
 
-function App() {
-
-  // Modal Form Come Back
-  const [showModal,setShowModal] = useState(false)
-
-  
+function App() { 
 
   return (
     <div className="App">
