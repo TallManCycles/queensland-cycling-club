@@ -33,6 +33,19 @@ export default class Upcomingraces extends Component {
         }            
     ]
 
+    function closeModal () {
+        let modal = document.getElementById("myModal");
+        modal.style.display = "none";
+      }
+  
+      function showModal(){
+        let modal = document.getElementById("myModal");
+        modal.style.display = "block";
+
+        let modalTitle = document.getElementById("modalTitle");
+        modalTitle.innerText = "Upcoming Races";
+      }
+
     return (
         <section id="races">
         <h2>Upcoming Races</h2>
@@ -50,7 +63,7 @@ export default class Upcomingraces extends Component {
                         <td>{race.date}</td>
                         <td>{race.length}</td>
                         <td>{race.title}</td>
-                        <td>For more details <a href="#contact">contact us</a> for entry requirements.</td>
+                        <td>For more details <a href="#contact" onClick={showModal}>contact us</a> for entry requirements.</td>
                     </tr>
                 )
             })}  

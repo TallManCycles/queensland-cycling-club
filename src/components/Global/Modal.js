@@ -1,49 +1,72 @@
+import { useEffect } from 'react';
 import ReactDOM from 'react-dom'
 import './Modal.css'
 
 export default function Modal({title}) {
+
+    function contactUs() {
+        const firstName = document.getElementById("first_name").value;
+        document.getElementById("thankyou").innerText = `Thank you ${firstName}!, Your message has been received.
+                                                                                    We will be in contact shortly.`;
+        setTimeout(closeModal,2000);
+    }
+
+    function closeModal () {
+        let modal = document.getElementById("myModal");
+        modal.style.display = "none";
+        clearData();
+    }
+
+    function clearData() {
+        document.getElementById("first_name").value = "";
+        document.getElementById("last_name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("message").value = "";
+        document.getElementById("thankyou").innerText = "";
+    }
+
   return ReactDOM.createPortal((
     <section id="modalBox">
-        <div id="myModal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="onClose()">&times;</span>
+        <div id="myModal" className="modal">
+            <div className="modal-content">
+                <span className="close" onClick={closeModal}>&times;</span>
                 <section id="contact">
-                    <div class="contactuscontainer">
-                    <h2 id="modalTitle" >Contact Us</h2>
+                    <div className="contactuscontainer">
+                    <h2 id="modalTitle">Contact Us</h2>
                     <form name="contact_us" method="#">
-                        <ul class="contactus">
+                        <ul className="contactus">
                             <li>
-                                <label for="first_name">First Name:</label>
+                                <label htmlFor="first_name">First Name:</label>
                                 <input type="text" id="first_name" name="first_name" required/>
                             </li>
                             <li>
-                                <label for="last_name">Last Name:</label>
+                                <label htmlFor="last_name">Last Name:</label>
                                 <input type="text" id="last_name" name="last_name" required/>
                             </li>
                             <li>
-                                <label for="email">Email:</label>
+                                <label htmlFor="email">Email:</label>
                                 <input type="email" id="email" name="email" required/>
                             </li>                                                            
                             <li>
                                 <input type="checkbox" id="racedetails" name="racedetails"/> 
-                                <label for="racedetails">Race details</label>                             
+                                <label htmlFor="racedetails">Race details</label>                             
                             </li>
                             <li>
                                 <input type="checkbox" id="groupridedetails" name="groupridedetails"/> 
-                                <label for="groupridedetails">Join a group ride</label>                             
+                                <label htmlFor="groupridedetails">Join a group ride</label>                             
                             </li>
                             <li>                                
                                 <input type="checkbox" id="complaint" name="complaint"/> 
-                                <label for="complaint">Lodge a complaint</label>                             
+                                <label htmlFor="complaint">Lodge a complaint</label>                             
                             </li>
                             <li>
-                                <label for="message">Message:</label>
+                                <label htmlFor="message">Message:</label>
                                 <textarea id="message" name="message"></textarea>
                             </li>
                             <li><p id="thankyou" ></p></li>
                         </ul>
                         <p>
-                        <button type="button" onclick="contactUs()">Submit</button>
+                        <button type="sumbit" onClick={contactUs}>Submit</button>
                         </p>
                     </form>
                 </div>

@@ -5,6 +5,15 @@ import "./Footer.css"
 
 export default class Footer extends Component {
   render() {
+
+    function showModal(){
+      let modal = document.getElementById("myModal");
+      modal.style.display = "block";
+
+      let modalTitle = document.getElementById("modalTitle");
+        modalTitle.innerText = "Contact Us";
+    }
+
     return (        
             <footer>
                 <address>

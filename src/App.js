@@ -19,7 +19,9 @@ import Weather from './components/Main/Weather';
 function App() {
 
   // Modal Form Come Back
-  // const [showModal,setShowModal] = useState(false)
+  const [showModal,setShowModal] = useState(false)
+
+  
 
   return (
     <div className="App">
@@ -31,11 +33,7 @@ function App() {
           <Upcomingraces />
           <Grouprides />
           <Weather />
-
-          {/* Modal Form Come Back */}
-          {/* if (showModal){
-            <Modal />
-          } */}
+          <Modal />
         </main>  
         <aside>
           <About />

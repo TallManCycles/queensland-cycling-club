@@ -11,8 +11,6 @@ export default function Weather() {
     const base = `https://api.openweathermap.org/data/2.5/weather?q=${city},${countryCode}&units=metric&APPID=${api}`;
     const {data: weather, isPending, error} = useFetch(base)
 
-    console.log(weather)
-
     return (
         <section id="weather_dashboard">
         <h2>Weather Forecast</h2>				
