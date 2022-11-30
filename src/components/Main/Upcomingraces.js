@@ -9,26 +9,26 @@ export default class Upcomingraces extends Component {
         {
             id: 1,
             date: "15/12/2022",
-            length: "100kms",
+            length: "100",
             title: "The ultimate one day classic"
         },
         {
             id: 2,
             date: "19/12/2022",
-            length: "45kms",
+            length: "45",
             title: "Noosa Time Trial"            
         },
         {
             id: 3,
             date: "15/12/2022",
-            length: "100kms",
+            length: "100",
             title: "The ultimate one day classic"
             
         },
         {
             id: 4,
             date: "15/12/2022",
-            length: "100kms",
+            length: "100",
             title: "The ultimate one day classic"
         }            
     ]
