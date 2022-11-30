@@ -1,4 +1,5 @@
 {
+  "homepage": "https://tallmancycles.github.io/queensland-cycling-club",
   "predeploy": "npm run build",
   "deploy": "gh-pages -d build",
   "name": "queensland-cycling-club",
